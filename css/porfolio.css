@@ -58,6 +58,7 @@ button:focus {
   border-bottom-right-radius: 5px;
 }
 .work-link {
+  position: relative;
   display: block;
   text-decoration: none;
 }
@@ -83,12 +84,24 @@ button:focus {
   font-size: 16px;
   line-height: 1.88;
 }
-/* .work-examples .hover-text {
+.work-link .hover-text {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  max-height: 294px;
+  padding: 63px 24px;
+
   color: var(--primary-background-color);
   font-size: 18px;
   line-height: 1.56;
-  background: var(--primary-hover-color);
-} */
+  background: rgba(33, 150, 243, 0.9);
+}
+.work-link:hover .hover-text {
+  opacity: 1;
+}
 .example-content {
   padding: 20px 24px;
   background: var(--primary-background-color);

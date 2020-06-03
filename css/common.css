@@ -1,4 +1,4 @@
-/* Основные стили для 2х страниц */
+/* Основные стили сайта */
 :root {
   --primary-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
@@ -122,16 +122,18 @@ img {
 .current {
   color: var(--primary-hover-color);
 }
-.current::after {
+.current::before {
   content: '';
   position: absolute;
-  display: block;
-  padding-top: 28px;
-  bottom: 0;
-  right: 0;
-  border-color: #2196f3;
+  display: iblock;
+  bottom: -2.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 6px);
+  height: 4px;
+
+  background-color: #2196f3;
   border-radius: 2px;
-  width: calc(100% - 2px);
 }
 .contact-item {
   display: block;
@@ -167,7 +169,7 @@ img {
   fill: var(--primary-hover-color);
 }
 
-/*Стили для кнопок ссылок. Когда будем делать НАСТОЯЩУЮ кнопку в футере- потом уберу*/
+/*Стили для кнопок ссылок*/
 .link-button {
   display: inline-block;
   padding: 10px 32px;
@@ -189,7 +191,7 @@ img {
 /*Стили для footer*/
 
 footer {
-  background-color: #2f303a; /*ТАК УДОБНЕЙ ВИДЕТЬ применились ли цвета текста*/
+  background-color: #2f303a;
 }
 
 footer .title {
