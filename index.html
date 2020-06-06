@@ -61,7 +61,19 @@
       <!-- Герой -->
       <section class="hero">
         <h1>эффективные решения для вашего бизнеса</h1>
-        <a class="link-button" href="#" target="_blank">Заказать услугу</a>
+        <a class="link-button" href="#" target="_blank" data-open-modal
+          >Заказать услугу</a
+        >
+        <!-- <div class="backdrop is-hidden" data-backdrop>
+          <div class="modal">
+            <p>
+              Оставьте свои данные, мы вам перезвоним
+            </p>
+            <a class="link-button" href="#" target="_blank">Отправить</a>
+            <button data-close-modal>
+              Закрыть
+            </button>
+          </div> -->
       </section>
 
       <!--Преимущества студии-->
@@ -608,5 +620,25 @@
         2020 | Developed by GoIT Students
       </p>
     </footer>
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      refs.backdrop.addEventListener('click', logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
+
+      function logBackdropClick() {
+        console.log('Это клик в бекдроп');
+      }
+    </script>
   </body>
 </html>
