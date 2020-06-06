@@ -92,6 +92,8 @@ button:focus {
 .overlay {
   position: relative;
   overflow: hidden;
+  width: 370px;
+  height: 294px;
 }
 .work-link .hover-text {
   position: absolute;
